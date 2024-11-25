@@ -33,7 +33,7 @@ def line_chart(*geo):
 
 
 #불러오기
-df = pd.read_csv("seoul_filtered.csv")
+df = pd.read_csv("seoul_filtered2.csv")
 #pivot table로 dataframe의 구조를 바꾼다
 pivottable = pd.pivot_table(df, index="구분",
                             values=["미세먼지(PM10)","초미세먼지(PM2.5)"],
@@ -47,6 +47,7 @@ del pivottable["초미세먼지(PM2.5)"]
 print("ㅡㅡㅡㅡㅡㅡㅡpivot table--------------")
 print(pivottable)
 
+st.title("Woo, Sangmin Annotated")
 #간단한 streamlit 구성
 col1, col2 = st.columns(2)
 with col1:
